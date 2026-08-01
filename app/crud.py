@@ -1,7 +1,9 @@
+print("NEW CRUD FILE LOADED")
+
 from sqlalchemy.orm import Session
 
 from app.tasks.models import Task
-from app.tasks.schema import TaskCreate, TaskUpdate
+from app.tasks.schema import  TaskUpdate
 
 from app.user.models import User
 from app.user.schema import UserCreate
