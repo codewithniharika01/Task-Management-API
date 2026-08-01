@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Task Management API 🚀
 
 A backend Task Management API built using FastAPI with JWT Authentication.
@@ -84,6 +84,8 @@ PostgreSQL Database
 Docker Support
 Cloud Deployment
 Role Based Authentication
-=======
+
 # Task-Management-API
->>>>>>> aa71b383725097988de9d91e77f97a2e9d00f8aa
+Author:
+Niharika
+
