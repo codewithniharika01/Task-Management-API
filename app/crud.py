@@ -1,4 +1,4 @@
-print("NEW CRUD FILE LOADED")
+print("CRUDAAA LOADED")
 
 from sqlalchemy.orm import Session
 
