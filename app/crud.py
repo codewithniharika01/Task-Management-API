@@ -3,8 +3,8 @@ from sqlalchemy.orm import Session
 from app.tasks.models import Task
 from app.tasks.schema import TaskCreate, TaskUpdate
 
-from app.models.user import User
-from app.schemas.user import UserCreate
+from app.user.models import User
+from app.user.schema import UserCreate
 from app.auth import hash_password
 
 
