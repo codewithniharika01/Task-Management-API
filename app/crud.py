@@ -3,30 +3,25 @@ from sqlalchemy.orm import Session
 from app.tasks.models import Task
 from app.tasks.schema import TaskCreate, TaskUpdate
 
-from app.user.models import Users
-from app.user.schema import UserCreate
-
+from app.models.user import User
+from app.schemas.user import UserCreate
 from app.auth import hash_password
 
 
-def create_task(
-    db: Session,
-    task: TaskCreate,
-    user_id: int
-):
+def create_user(db, user: UserCreate):
+    hashed_password = hash_password(user.password)
 
-    new_task = Task(
-        title=task.title,
-        description=task.description,
-        user_id=user_id
+    db_user = User(
+        username=user.username,
+        email=user.email,
+        password=hashed_password
     )
 
-    db.add(new_task)
+    db.add(db_user)
     db.commit()
-    db.refresh(new_task)
+    db.refresh(db_user)
 
-    return new_task
-
+    return db_user
 
 def get_task(
     db: Session,
