@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from app.tasks.models import Task
 from app.tasks.schema import  TaskUpdate
 
-from app.user.models import User
+from app.user.models import Users
 from app.user.schema import UserCreate
 from app.auth import hash_password
 
