@@ -13,7 +13,7 @@ from app.auth import hash_password
 def create_user(db, user: UserCreate):
     hashed_password = hash_password(user.password)
 
-    db_user = User(
+    db_user = Users(
         username=user.username,
         email=user.email,
         password=hashed_password
