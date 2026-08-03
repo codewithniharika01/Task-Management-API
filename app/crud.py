@@ -85,33 +85,29 @@ def get_task(
 
 
 
-def update_task(
-    db: Session,
-    task_id: int,
-    task: TaskUpdate,
-    user_id: int
-):
+def update_task(db, task_id, task_data, user_id):
 
-    existing_task = db.query(Task).filter(
+    task = db.query(Task).filter(
         Task.id == task_id,
         Task.user_id == user_id
     ).first()
 
-
-    if existing_task is None:
+    if task is None:
         return None
 
+    if task_data.title is not None:
+        task.title = task_data.title
 
-    existing_task.title = task.title
-    existing_task.description = task.description
+    if task_data.description is not None:
+        task.description = task_data.description
 
+    if task_data.completed is not None:
+        task.completed = task_data.completed
 
     db.commit()
-    db.refresh(existing_task)
+    db.refresh(task)
 
-    return existing_task
-
-
+    return task
 
 def delete_task(
     db: Session,
