@@ -131,7 +131,4 @@ def delete_task(
 
     db.delete(task)
     db.commit()
-
-
     return task
-
