@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 from app.db import engine, Base
 
-from app.user.models import User
+from app.user.models import Users
 from app.tasks.models import Task
 
 from app.tasks.router import tasks
