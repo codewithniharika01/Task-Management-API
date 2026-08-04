@@ -1,91 +1,79 @@
+# Smart Task Manager API 🚀
 
-# Task Management API 🚀
+A secure Task Management REST API built using FastAPI with JWT Authentication and SQLAlchemy ORM.
 
-A backend Task Management API built using FastAPI with JWT Authentication.
-
-## Features
+## 🌟 Features
 
 - User Registration
-- User Login
-- JWT Token Authentication
+- User Login with JWT Authentication
 - Password Hashing using bcrypt
 - Create Tasks
-- Read Tasks
+- Get All Tasks
+- Get Single Task
 - Update Tasks
 - Delete Tasks
-- User-wise Task Management
-- Protected APIs
+- User-specific Task Management
+- RESTful API Design
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - Python
 - FastAPI
 - SQLAlchemy
 - SQLite
+- JWT Authentication
 - Pydantic
-- JWT
-- Passlib (bcrypt)
+- Uvicorn
+- Railway Deployment
 
-## Project Structure
-Taskmanagement
+## 📂 Project Structure
+app/
 │
-├── app
-│ ├── main.py
-│ ├── auth.py
-│ ├── crud.py
-│ ├── dependencies.py
-│ ├── db.py
-│ ├── tasks
-│ └── user
+├── main.py
+├── auth.py
+├── crud.py
+├── database.py
 │
-├── requirements.txt
-├── .gitignore
-└── README.md
+├── models/
+├── schemas/
+└── routers/
 
+## 🔐 Authentication Flow
 
-## Installation
+1. User registers account
+2. Password is securely hashed
+3. User logs in
+4. JWT token is generated
+5. Token is used to access protected APIs
 
-Clone the repository:
+## 📌 API Endpoints
 
-```bash
-git clone your-repository-link
+### Authentication
 
+| Method | Endpoint |
+|---|---|
+| POST | /register |
+| POST | /login |
 
-#Create virtual environment:
-python -m venv env
+### Tasks
 
+| Method | Endpoint |
+|---|---|
+| GET | /tasks |
+| POST | /tasks |
+| GET | /tasks/{task_id} |
+| PUT | /tasks/{task_id} |
+| DELETE | /tasks/{task_id} |
 
-##Activate environment:
-#Windows:
-env\Scripts\activate
+## 🌐 Deployment
 
+Live API:
+https://vibrant-dedication-production-5393.up.railway.app
 
-#Install dependencies:
-pip install -r requirements.txt
+Swagger Documentation:
 
+/docs
 
-#Run Application
-uvicorn app.main:app --reload
+## 👩‍💻 Author
 
-#API Documentation
-#Swagger UI:
-
-http://127.0.0.1:8000/docs
-
-
-#Authentication Flow:
-Register user
-Login and get JWT token
-Authorize using Bearer Token
-Access protected task APIs
-
-Future Improvements:
-PostgreSQL Database
-Docker Support
-Cloud Deployment
-Role Based Authentication
-
-# Task-Management-API
-Author:
 Niharika
-
