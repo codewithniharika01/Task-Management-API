@@ -1,8 +1,8 @@
-# Smart Task Manager API 🚀
+-> Smart Task Manager API 🚀
 
 A secure Task Management REST API built using FastAPI with JWT Authentication and SQLAlchemy ORM.
 
-## 🌟 Features
+ 🌟 Features
 
 - User Registration
 - User Login with JWT Authentication
@@ -15,7 +15,7 @@ A secure Task Management REST API built using FastAPI with JWT Authentication an
 - User-specific Task Management
 - RESTful API Design
 
-## 🛠 Tech Stack
+ -> 🛠 Tech Stack
 
 - Python
 - FastAPI
@@ -26,7 +26,7 @@ A secure Task Management REST API built using FastAPI with JWT Authentication an
 - Uvicorn
 - Railway Deployment
 
-## 📂 Project Structure
+->📂 Project Structure
 app/
 │
 ├── main.py
@@ -38,7 +38,7 @@ app/
 ├── schemas/
 └── routers/
 
-## 🔐 Authentication Flow
+-> 🔐 Authentication Flow
 
 1. User registers account
 2. Password is securely hashed
@@ -46,16 +46,16 @@ app/
 4. JWT token is generated
 5. Token is used to access protected APIs
 
-## 📌 API Endpoints
+-> 📌 API Endpoints
 
-### Authentication
+-> Authentication
 
 | Method | Endpoint |
 |---|---|
 | POST | /register |
 | POST | /login |
 
-### Tasks
+-> Tasks
 
 | Method | Endpoint |
 |---|---|
@@ -65,7 +65,7 @@ app/
 | PUT | /tasks/{task_id} |
 | DELETE | /tasks/{task_id} |
 
-## 🌐 Deployment
+-> 🌐 Deployment
 
 Live API:
 https://vibrant-dedication-production-5393.up.railway.app
