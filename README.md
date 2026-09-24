@@ -67,13 +67,12 @@ app/
 
 -> 🌐 Deployment
 
-Live API:
-https://vibrant-dedication-production-5393.up.railway.app
+Render Deployment
 
-Swagger Documentation:
+Live API: https://task-management-api-dpee.onrender.com
 
-/docs
+Swagger API Documentation: https://task-management-api-dpee.onrender.com/docs
 
-## 👩‍💻 Author
+👩‍💻 Author
 
 Niharika
