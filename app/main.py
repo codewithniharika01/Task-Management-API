@@ -18,8 +18,15 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-)
+)  
 
+@app.get("/")
+def root():
+    return {
+        "success": True,
+        "message": "Task Management API is running",
+        "docs": "/docs"
+    }
 Base.metadata.create_all(bind=engine)
 
 
